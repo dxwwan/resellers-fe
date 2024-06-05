@@ -42,7 +42,7 @@ export const AuctionPurchaseModal = ({
   });
 
   return (
-    <Modal isOpen={true} onClose={() => {}}>
+    <Modal isOpen={true} onClose={closeModal}>
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>입찰하기</ModalHeader>
@@ -52,13 +52,13 @@ export const AuctionPurchaseModal = ({
             textAlign="center"
             flexDirection="column"
           >
-            <Box fontSize="3.75rem" fontWeight="600">
+            <Box fontSize={['xl', '2xl', '3xl']} fontWeight="600">
               입찰가 선정
             </Box>
             {addedPrice ? (
-              <Box fontSize="3rem">{addedPrice}원</Box>
+              <Box fontSize={['lg', 'xl', '2xl']}>{addedPrice}원</Box>
             ) : (
-              <Box fontSize="3rem">{nowPrice}원</Box>
+              <Box fontSize={['lg', 'xl', '2xl']}>{nowPrice}원</Box>
             )}
             <Flex justifyContent="center">
               <Button

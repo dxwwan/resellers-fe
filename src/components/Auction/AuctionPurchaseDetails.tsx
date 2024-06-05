@@ -27,39 +27,41 @@ export const AuctionPurchaseDetails = ({
   };
 
   return (
-    <Flex flexDirection="column" w="100%" m="2.25rem 2.25rem 0 0">
-      <Text fontSize="xx-large" fontWeight="500" mb="1.25rem">
+    <Flex flexDirection="column" w="100%" m={[4, 8, 12]}>
+      <Text fontSize={['xl', '2xl', '3xl']} fontWeight="500" mb="1.25rem">
         {productName}
       </Text>
-      <Flex justifyContent="space-between" alignItems="center">
-        <Box fontSize="2.5rem" fontWeight="600">
+      <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
+        <Box fontSize={['lg', 'xl', '2xl']} fontWeight="600">
           현재 가격 : {priceFormatter(nowPrice)}원
         </Box>
-        <Text fontSize="larger" mb="1.25rem">
+        <Text fontSize={['md', 'lg']} mb="1.25rem">
           {writer}
         </Text>
       </Flex>
       <Divider orientation="horizontal" mb="1rem" />
       <Box>
         <AuctionPurchaseImages imageNames={imageNames} />
-        <Flex justifyContent="space-between" marginBottom="4rem">
+        <Flex
+          justifyContent="space-between"
+          marginBottom="4rem"
+          flexWrap="wrap"
+        >
           <Flex flexDirection="column">
-            <Box fontSize="1.5rem" color={theme.colors.gray[500]}>
+            <Box fontSize={['sm', 'md', 'lg']} color={theme.colors.gray[500]}>
               시작가격 : {priceFormatter(startPrice)}원
             </Box>
-            <Box fontSize="2rem" fontWeight="600">
+            <Box fontSize={['md', 'lg', 'xl']} fontWeight="600">
               입찰 건수 : {bidCount}
             </Box>
             <Button
-              px={28}
-              py={6}
+              px={[4, 8, 28]}
+              py={[2, 4, 6]}
               color="white"
               bgColor={theme.colors.orange[300]}
               float="right"
               marginTop="2rem"
-              onClick={() => {
-                openModal();
-              }}
+              onClick={openModal}
             >
               입찰 하기
             </Button>
@@ -70,11 +72,11 @@ export const AuctionPurchaseDetails = ({
           </Flex>
           <AuctionTime startAt={startAt} endAt={endAt} />
         </Flex>
-        <Text fontSize="x-large" fontWeight="600" marginBottom="2rem">
+        <Text fontSize={['lg', 'xl']} fontWeight="600" marginBottom="2rem">
           설명
         </Text>
         <DescriptionBox description={description} />
-        <Text fontSize="x-large" fontWeight="600" marginBottom="2rem">
+        <Text fontSize={['lg', 'xl']} fontWeight="600" marginBottom="2rem">
           결함
         </Text>
         <DescriptionBox description={defect} />

@@ -5,6 +5,7 @@ import { Flex, Img } from '@chakra-ui/react';
 import { generateImgCloudFrontUrl } from '../../utils/url';
 import prevArrow from '../../assets/prevArrow.svg';
 import nextArrow from '../../assets/nextArrow.svg';
+
 export interface PurchaseImagesProps {
   imageNames: string[];
 }
@@ -57,15 +58,20 @@ export const AuctionPurchaseImages = ({ imageNames }: PurchaseImagesProps) => {
     nextArrow: <NextArrow />,
   };
   return (
-    <Flex flexDirection="row" w="100%" m="2.25rem" maxW="32rem">
+    <Flex
+      flexDirection="row"
+      w="100%"
+      m="2.25rem"
+      maxW={['20rem', '25rem', '32rem']}
+    >
       <Slider {...settings}>
         {imageNames.map((imageName: string) => (
           <Img
             key={imageName}
             src={generateImgCloudFrontUrl(imageName)}
             alt={imageName}
-            w="20rem"
-            h="30rem"
+            w={['15rem', '20rem', '25rem']}
+            h={['20rem', '25rem', '30rem']}
             maxW="30rem"
             maxH="30rem"
           />
