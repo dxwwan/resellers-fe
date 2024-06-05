@@ -35,10 +35,10 @@ export const AuctionPurchase = () => {
   return (
     <Box w="100%" p={[4, 8, 12]}>
       <Flex justifyContent="start" alignItems="center" flexWrap="wrap">
-        <Text fontSize={['xl', '2xl', '3xl']} fontWeight="600" mr="2rem">
+        <Text fontSize={['2xl', '3xl', '4xl']} fontWeight="600" mr="2rem">
           기자재 거래
         </Text>
-        <Text fontSize={['md', 'lg']}>상품 카테고리 : {auction.itemType}</Text>
+        <Text fontSize={['lg', 'xl']}>상품 카테고리 : {auction.itemType}</Text>
       </Flex>
       <Divider orientation="horizontal" my={[2, 4]} />
       <Flex flexDirection="column">

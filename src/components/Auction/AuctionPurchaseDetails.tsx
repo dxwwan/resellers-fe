@@ -27,12 +27,12 @@ export const AuctionPurchaseDetails = ({
   };
 
   return (
-    <Flex flexDirection="column" w="100%" m={[4, 8, 12]}>
-      <Text fontSize={['xl', '2xl', '3xl']} fontWeight="500" mb="1.25rem">
+    <Flex flexDirection="column" w="100%" m={[4, 8, 0]}>
+      <Text fontSize={['2xl', '3xl', '4xl']} fontWeight="500" mb="1.25rem">
         {productName}
       </Text>
       <Flex justifyContent="space-between" alignItems="center" flexWrap="wrap">
-        <Box fontSize={['lg', 'xl', '2xl']} fontWeight="600">
+        <Box fontSize={['xl', '2xl', '6xl']} fontWeight="600">
           현재 가격 : {priceFormatter(nowPrice)}원
         </Box>
         <Text fontSize={['md', 'lg']} mb="1.25rem">
@@ -72,11 +72,11 @@ export const AuctionPurchaseDetails = ({
           </Flex>
           <AuctionTime startAt={startAt} endAt={endAt} />
         </Flex>
-        <Text fontSize={['lg', 'xl']} fontWeight="600" marginBottom="2rem">
+        <Text fontSize={['xl', '2xl']} fontWeight="600" marginBottom="2rem">
           설명
         </Text>
         <DescriptionBox description={description} />
-        <Text fontSize={['lg', 'xl']} fontWeight="600" marginBottom="2rem">
+        <Text fontSize={['xl', '2xl']} fontWeight="600" marginBottom="2rem">
           결함
         </Text>
         <DescriptionBox description={defect} />
