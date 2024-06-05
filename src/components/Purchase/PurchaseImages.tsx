@@ -24,7 +24,7 @@ export const PurchaseImages = ({ fileNames }: PurchaseImagesProps) => {
     <Flex
       flexDirection="row"
       w="100%"
-      m={[4, 8, 12]}
+      m={[4, 8, 0]}
       maxW={['20rem', '25rem', '32rem']}
       justify="center"
     >
